@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="input-section">
+            <label for="zipCode">Enter ZIP Code:</label>
+            <input type="text" id="zipCode" placeholder="ZIP Code">
+            <button onclick="getWeatherByZip()">Get Weather</button>
+        </div>
+        <div class="input-section">
+            <label for="city">Enter City:</label>
+            <input type="text" id="city" placeholder="City">
+            <label for="state">Enter State:</label>
+            <input type="text" id="state" placeholder="State">
+            <button onclick="getWeatherByCity()">Get Weather</button>
+        </div>
+        <div class="weather-info">
+            <p id="currentDate"></p>
+            <p id="cityName"></p>
+            <p id="temperature"></p>
+            <p id="feelsLike"></p>
+            <p id="humidity"></p>
+            <p id="conditions"></p>
+            <p id="tempHighLow"></p>
+            <button onclick="convertTemp()">Convert to Celsius</button>
+        </div>
+        <div class="forecast">
+            <h2>3-Day Forecast</h2>
+            <div id="forecast"></div>
+        </div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>
